@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	  <!-- customer -->
+   <bean class="com.A1.Address" name= "add">
+    <property name = "streetName" value="Street"/>
+      <property name = "cityName" value="pune"/>
+      <property name = "stateName" value="maha"/>
+      <property name = "zipId" value="423502"/>
+       <property name = "countryName" value="India"/>
+  
+       
+        </bean>
+        
+        <!-- Address  -->
+   <bean class=" com.A1.Customer" name= "customer">
+      <property name = "customerId" value="10"/>
+      <property name = "customerName" value="priya"/>
+      <property name = "customerContact" value="878911"/>
+      <property name = "address">
+           <ref bean= "add" />
+           </property>
+            
+       
+      
+      
+   </bean>
+        
+	
+</beans>
+
